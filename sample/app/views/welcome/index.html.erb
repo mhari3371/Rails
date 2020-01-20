@@ -1,0 +1,13 @@
+<h1>Welcome to FreshWorks </h1>
+
+<b><%= "Date: #{ Date.today}"%></b>
+
+<%= javascript_tag do%>
+	alert('hi');
+	<% end%>
+</br>
+<h1><b><%= link_to 'Post' , posts_path %></h1>
+
+<h1><b><%= link_to 'profile' , profile_path %></h1>
+
+<h1><b><%= link_to 'Login' , login_path %></h1>

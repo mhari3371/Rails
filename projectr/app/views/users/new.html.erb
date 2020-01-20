@@ -1,0 +1,13 @@
+<form name="RegisterForm" action ="/users"  method="POST">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>"><br>
+      <h4> Name:<br>
+          <input type="text" name="user[username]"><br>
+        Mail:<br>
+          <input type="text" name="user[email]"><br>
+        PassWord:<br>
+        <input type="password" name="user[encrypted_password]"><br>
+        <!-- Retype PassWord:<br>
+        <input type="password" name="user[userpassword2]"><br> -->
+        <input type="submit" value="Register" ><br> <h4>
+
+      </form>

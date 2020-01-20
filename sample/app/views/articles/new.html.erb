@@ -1,0 +1,16 @@
+<%= form_for(@article) do |f| %>
+
+<div class="field">
+	<%= f.label :ArticleId%>
+	<%= f.text_field :ArticleId%>
+</div>
+
+<div class="field">
+	<%= f.label :Description %>
+	<%= f.text_field :description %>
+</div>
+
+<div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
