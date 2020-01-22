@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :tweets
+  resources :tweets do
+    member do
+      put "like" => "tweets#like"
+      put "dislike" => "tweets#dislike"
+    end
+  end
   root "users#index"
   get 'users/new'
   post '/users' => 'users#create'

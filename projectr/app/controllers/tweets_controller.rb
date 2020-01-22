@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-  before_action :set_tweet, only: [:show, :edit, :update, :destroy]
+  before_action :set_tweet, only: [:show, :edit, :update, :destroy , :like , :dislike]
   
 
   # GET /tweets
@@ -63,6 +63,22 @@ end
     end
   end
 
+    def like
+    @user = User.find(session[:user_id])
+   @tweet.like_by @user
+    redirect_to tweets_path
+  end
+
+  def dislike
+    @user = User.find(session[:user_id])
+   @tweet.dislike_by @user
+    redirect_to tweets_path
+  end
+
+
+
+
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_tweet

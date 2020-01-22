@@ -21,6 +21,11 @@
         <%else%>
           <td><%= link_to 'Show', tweet %></td>
         <%end%>
+
+       <td><%= link_to  'like' , like_tweet_path(tweet) ,method: :put%> <%= tweet.get_upvotes.size %></td>
+       <td><%= link_to  'dislike' , dislike_tweet_path(tweet) ,method: :put%> <%= tweet.get_downvotes.size %></td>
+       
+      
       </tr>
     <% end %>
   </tbody>
